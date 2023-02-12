@@ -1,108 +1,109 @@
-Property Price Prediction
-Table of contents
-1. Project description
+# Прогнозирование цен на недвижимость
 
-2. What case do we solve?
+## Содержание
+1. Описание проекта
 
-3. Data overview
+2. Какой кейс мы решаем?
 
-4. Project stages
+3. Обзор данных
 
-5. Results
+4. Этапы проекта
 
-Project description
-We are given with a dataset representing properties listed in the US. The project objectives are:
+5. Результаты
 
-Clean the dataset
-Oplimise the features for the neads of the project
-Create a number of machine-learning models to predict price using the given features
-What case do we solve?
-A representative of a large real-estate agency has approached us with the following problem:
+## Описание проекта
+Нам предоставляется набор данных об объектах недвижимости в США. Целями проекта являются:
+* Очистить набор данных
+* Обработка признаков, необходимых для проекта
+* Создание ряда моделей машинного обучения для прогнозирования цены с использованием заданных функций
 
-“My realtors spend a disastrous amount of time sorting listings and looking for great deals. Therefore, their reaction speed, and, frankly speaking, the quality of the analysis does not reach the level of our competitors. This affects our financial performance.
+## Какой кейс мы решаем?
+Представитель крупного агентства недвижимости обратился к нам со следующей проблемой:
 
-Your task is to develop a model that would allow us to beat competitors in terms of the speed and quality of transactions."
+“Мои риэлторы тратят катастрофическое количество времени на сортировку объявлений и поиск выгодных предложений. Поэтому скорость их реакции и, откровенно говоря, качество анализа не дотягивают до уровня наших конкурентов. Это влияет на наши финансовые показатели.
 
-The objective of the project is to develop a service for predicting the cost of properties based on the history of offers.
+Ваша задача - разработать модель, которая позволила бы нам превзойти конкурентов с точки зрения скорости и качества транзакций".
 
-Data overview
-The full dataset is here.
+Целью проекта является разработка сервиса для прогнозирования стоимости объектов недвижимости на основе истории предложений.
 
-There are 377,185 lines representing different properties and 18 columns describing their features.
+## Обзор данных
+Полный набор данных находится [здесь](https://drive.google.com/file/d/1JdahsdHu4N4-Xhe46VAPQFTqFVC7QTov/view?usp=share_link).
 
-Each property has the following features:
+Существует 377 185 строк, представляющих различные свойства, и 18 столбцов, описывающих их особенности.
 
-status
-private pool
-propertyType
-street
-baths
-homeFacts
-fireplace
-city
-schools
-sqft
-zipcode
-beds
-state
-stories
-mls-id
-PrivatePool
-MlsId
-target - price of the property, the predicting value
-Project stages
-The project consists of the following parts:
+Каждое свойство обладает следующими особенностями:
+1. status - статус
+2. частный бассейн
+3. Тип недвижимости
+4. уличные
+5. бани
+6. предметы 
+7. домашнего обихода
+7. камин
+8. городские
+9. школы
+10. кв.м почтовый
+11. индекс
+12. кровати
+13. государственные
+14. истории
+15. mls-id
+16. Приватный пул
+18. Цель MlsId - цена объекта недвижимости, прогнозируемая стоимость
 
-Project Overview
-Explonatory Data Analysis - Part 1
-Data Overview
-Data Preprocessing
-target
-status
-private pool & PrivatePool
-propertyType
-street
-baths
-homeFacts
-remodeled year
-heating,
-cooling,
-parking
-lotsize
-fireplace
-city
-schools
-schools rating
-schools distance
-sqft
-beds
-stories
-year built
-price/sq.ft. & lot_size & sqft
-Explonatory Data Analysis - Part 2
-Categorical features
-Feature Engeneering
-Removing outliers
-Correlation heat map
-Encoding categorical features
-Reducing the number of features
-Normalisation
-Modeling
-Evaluation metrics
-Baseline
-Linear Regression
-Light Gradient Boosted Machine Regressor
-Gradient Boosting
-Extreme Gradient Boosting
-Random Forest
-Stacking Regressor
-Results
-Conclusion
-Results
-The code is displayed in the following file
+## Этапы проекта
+Проект состоит из следующих частей:
 
-The best results are shown by the Random Forest Regressor model. The Mean Absolute Error became $59,434.88, which is quite a lot. The Mean Absolute Percent Error is 15.47%. The R^2 score (coefficient of determination) shows a relatively good 0.85 (on a scale from -1 to 1).
+Обзор проекта
+Исследовательский анализ данных - Часть 1
+Обзор данных
+Предварительная обработка данных
+целевой
+статус
+частный бассейн и приватный
+пул
+Тип недвижимости уличные
+бани
+Объекты недвижимости
+реконструированный год
+отопление,
+охлаждение,
+парковка
+размер участка: город школы рейтинг школ расстояние до школ
 
-Overall, the original dataset has a lot of issues and inconsistencies. Cleaning and unwrapping of these issues were one of the main objectives of this project, which was accomplished successfully.
 
-Another objective of this project was to demonstrate different machine-learning algorithms. The hyperparameters for all models were found using Optuna, a hyperparameter optimization framework. We left these calculations outside this Notebook as they are quite time-consuming.
+
+
+
+
+количество кроватей
+
+в кв.футах, год постройки
+, цена/кв.фут. & lot_size & sqft
+Исследовательский анализ данных - Часть 2
+Категориальные признаки
+Разработка функций
+Удаление выбросов
+Корреляционная тепловая карта
+Кодирование категориальных признаков
+Сокращение количества функций
+Нормализация
+Моделирование
+Показатели оценки
+Основание
+Линейная регрессия
+Машинный регрессор с усилением светового градиента
+Повышение градиента
+Экстремальное повышение градиента
+Случайный лес
+Укладочный регрессор
+Результаты
+Вывод
+Результаты
+Код отображается в следующем файле
+
+Наилучшие результаты показывает модель регрессора случайного леса. Средняя абсолютная ошибка составила 59 434,88 доллара, что довольно много. Средняя абсолютная процентная погрешность составляет 15,47%. Оценка R^2 (коэффициент детерминации) показывает относительно хорошие 0,85 (по шкале от -1 до 1).
+
+В целом, исходный набор данных содержит множество проблем и несоответствий. Очистка и разворачивание этих выпусков были одной из главных целей этого проекта, который был успешно выполнен.
+
+Другой целью этого проекта была демонстрация различных алгоритмов машинного обучения. Гиперпараметры для всех моделей были найдены с помощью Optuna, платформы оптимизации гиперпараметров. Мы оставили эти расчеты за пределами этой записной книжки, поскольку они отнимают довольно много времени.
