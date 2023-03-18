@@ -1,1 +1,9 @@
-project_venv/
+project.ipynb
+/my_env
+data.csv.zip
+/google-colab
+/.ipynb_checkpoints
+/project
+**.joblib
+**.zip
+git-filter-repo
