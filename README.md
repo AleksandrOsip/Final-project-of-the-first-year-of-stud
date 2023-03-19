@@ -52,6 +52,7 @@
 18. target - цена объекта недвижимости, прогнозируемая стоимость (целевой признак)
 
 ## Этапы проекта
+Код в ноутбуках выполнялся в Google-colab с использованием соответствующих библиотек. Создание серверной части осуществлялось на локальной IDE с импортом необходимых библиотек из google-requirements.txt
 Проект состоит из следующих частей:
 
 * I. [Обзор проекта](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud-origy/blob/main/Processing_and_baseline.ipynb)
