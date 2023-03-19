@@ -13,9 +13,9 @@
 
 ## Описание проекта
 Нам предоставляется набор данных об объектах недвижимости в США. Целями проекта являются:
-* Очистить набор данных
-* Обработка признаков, необходимых для проекта
-* Создание ряда моделей машинного обучения для прогнозирования цены с использованием заданных функций
+* Нахождение оптимальных гиперпараметров моделей машинного обучения с помощь фреймворка Optuna.
+* Обучение моделей ML с оптимальными гиперпараметрами.
+* Контейнеризация обученной модели и создание серверной части для взаимодействия модели с пользователем и обеспечения кросплатформенности.
 
 ## Какой кейс мы решаем?
 Представитель крупного агентства недвижимости обратился к нам со следующей проблемой:
@@ -54,7 +54,7 @@
 ## Этапы проекта
 Проект состоит из следующих частей:
 
-* I. Обзор проекта
+* I. [Обзор проекта](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud-origy/blob/main/Processing_and_baseline.ipynb)
 * II. Исследовательский анализ данных - Часть 1
   * Обзор данных
 * III. Предварительная обработка данных
@@ -91,17 +91,16 @@
 * VI. Моделирование
   * Показатели оценки
   * Baseline
-  * Linear Regression
-  * Light Gradient Boosted Machine Regressor
-  * Gradient Boosting
-  * Extreme Gradient Boosting
+  * [Linear Regression](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud-origy/blob/main/lr.ipynb)
+  * [Light Gradient Boosted Machine Regressor](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud-origy/blob/main/Optuna%20-%20LGBMRegressor.ipynb)
+  * [Gradient Boosting](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud-origy/blob/main/Optuna%20-%20Gradient%20Boosting.ipynb)
+  * [Extreme Gradient Boosting]()
   * Random Forest
   * Stacking Regressor
 * VII. Результаты
   * Вывод
 
 ## Результаты
-Код отображается в следующем [файле](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-study/blob/main/project/project.ipynb)
 
 1. Наилучшие результаты показывает модель регрессора случайного леса. Средняя абсолютная ошибка составила 59 434,88 доллара, что довольно много. Средняя абсолютная процентная погрешность составляет 15,47%. Оценка $R^2$ (коэффициент детерминации) показывает относительно хорошие 0,85 (по шкале от -1 до 1).
 
