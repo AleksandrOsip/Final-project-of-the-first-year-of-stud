@@ -91,19 +91,24 @@
 * VI. Моделирование
   * Показатели оценки
   * Baseline
-  * [Linear Regression](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud-origy/blob/main/lr.ipynb)
-  * [Light Gradient Boosted Machine Regressor](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud-origy/blob/main/Optuna%20-%20LGBMRegressor.ipynb)
-  * [Gradient Boosting](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud-origy/blob/main/Optuna%20-%20Gradient%20Boosting.ipynb)
-  * [Extreme Gradient Boosting]()
-  * Random Forest
-  * Stacking Regressor
-* VII. Результаты
-  * Вывод
+  * [Linear Regression](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud/blob/main/lr.ipynb)
+  * [Light Gradient Boosted Machine Regressor](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud/blob/main/Optuna%20-%20LGBMRegressor.ipynb)
+  * [Gradient Boosting](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud/blob/main/Optuna%20-%20Gradient%20Boosting.ipynb)
+  * [Extreme Gradient Boosting](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud/blob/main/Optuna%20-%20Extreme%20Gradient%20Boosting.ipynb)
+  * [Random Forest](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud/blob/main/Optuna%20-%20Random%20Forest.ipynb)
+  * [Stacking Regressor](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud/blob/main/Stacking%20Regressor.ipynb)
+* VII. [Результаты](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud/blob/main/Results%20of%20model%20training.ipynb)
+  * Вывод по выбору наилучшей модели.
+* VIII. Создание [сервера](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud/blob/main/app/src/server.py) на основе Flask приложения для наилучшей обученной модели.
+* IX. [Изоляция Flask приложения в docker контейнере](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud/blob/main/app/flask.Dockerfile).
+* X. [Flask приложение + uwsgi сервер в docker контейнере](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud/blob/main/app/uwsgi.Dockerfile).
+* XI. Docker-compose. [Flask + uwsgi приложение и nginx в двух разных контейнерах](https://github.com/AleksandrOsip/Final-project-of-the-first-year-of-stud/blob/main/docker-compose.yml)
 
 ## Результаты
 
-1. Наилучшие результаты показывает модель регрессора случайного леса. Средняя абсолютная ошибка составила 59 434,88 доллара, что довольно много. Средняя абсолютная процентная погрешность составляет 15,47%. Оценка $R^2$ (коэффициент детерминации) показывает относительно хорошие 0,85 (по шкале от -1 до 1).
+1. Наилучшие результаты показывает модель регрессора случайного леса. Средняя абсолютная ошибка составила 61852.55 доллара, что довольно много. Средняя абсолютная процентная погрешность составляет 15.26%. Оценка $R^2$ (коэффициент детерминации) показывает относительно хорошие 0.85 (по шкале от -1 до 1).
 
-2. В целом, исходный набор данных содержит множество проблем и несоответствий. Очистка и Feature Engineering были одной из главных целей этого проекта, который был успешно выполнен.
+2. В целом целью проекта была сериализация python объектов и контейнеризация приложений для воспроизводимости кода. Контейнеры [Flask + uwsgi](https://hub.docker.com/repository/docker/inbhktw72/fin_project_app_uwsgi/general) и [nginx](https://hub.docker.com/repository/docker/inbhktw72/fin_nginx_server/general) загружены на DockerHub.
 
-3. Другой целью этого проекта была демонстрация различных алгоритмов машинного обучения. Гиперпараметры для всех моделей были найдены с помощью **Optuna**, платформы оптимизации гиперпараметров. Мы оставили эти расчеты за пределами этого ноутбука, поскольку они отнимают довольно много времени.
+3. Другой целью проекта была демонстрация подбора гиперпараметров для различных моделей с помощью 
+платформы оптимизации гиперпараметров Optuna.
